@@ -27,10 +27,6 @@ class TaskControllerSpec extends ObjectBehavior {
         $this->shouldHaveType('Symfony\Bundle\FrameworkBundle\Controller\Controller');
     }
 
-    public function it_should_be_a_symfony_controller() {
-        $this->shouldHaveType('Symfony\Bundle\FrameworkBundle\Controller\Controller');
-    }
-
     public function it_should_have_index_action() {
         $response = $this->indexAction();
         $response->shouldHaveType('Symfony\Component\HttpFoundation\Response');
