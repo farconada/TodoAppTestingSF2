@@ -21,6 +21,7 @@ class TaskController extends Controller
 
     public function indexAction()
     {
+        $tasks = $this->repository->findAll();
         return $this->templating->render('FerTodoBundle:Task:index');
     }
 
