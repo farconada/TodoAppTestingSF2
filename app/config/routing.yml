@@ -1,0 +1,4 @@
+fer_todo:
+    resource: "@FerTodoBundle/Resources/config/routing.yml"
+    prefix:   /
+

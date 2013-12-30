@@ -1,0 +1,7 @@
+parameters:
+#    fer_todo.example.class: Fer\TodoBundle\Example
+
+services:
+#    fer_todo.example:
+#        class: %fer_todo.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
