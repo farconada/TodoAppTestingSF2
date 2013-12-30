@@ -8,6 +8,6 @@ class TaskController extends Controller
 {
     public function indexAction()
     {
-        return $this->render('FerTodoBundle:Default:index.html.twig');
+
     }
 }
