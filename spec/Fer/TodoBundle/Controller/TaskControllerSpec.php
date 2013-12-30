@@ -10,15 +10,17 @@ use PhpSpec\ObjectBehavior;
 use Fer\TodoBundle\Entity\TaskRepository;
 use Fer\TodoBundle\Entity\Task;
 use Symfony\Component\Templating\EngineInterface;
+use Symfony\Component\HttpFoundation\Response;
+use Prophecy\Argument;
 
 class TaskControllerSpec extends ObjectBehavior {
-
     public function let(
         TaskRepository $taskRepo,
-        EngineInterface $templating
+        EngineInterface $templating,
+        Response $response
     ) {
+        $templating->render(Argument::any())->willReturn($response);
         $this->beConstructedWith($taskRepo, $templating);
-
     }
 
     public function it_is_a_symfony_controller() {
