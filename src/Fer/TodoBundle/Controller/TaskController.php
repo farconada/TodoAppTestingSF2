@@ -25,13 +25,13 @@ class TaskController extends Controller
         return $this->templating->render('FerTodoBundle:Task:index');
     }
 
-    public function saveAction($argument1)
+    public function saveAction($task)
     {
         // TODO: write logic here
         return $this->templating->render('FerTodoBundle:Task:save');
     }
 
-    public function deleteAction($argument1)
+    public function deleteAction($task)
     {
         // TODO: write logic here
         return $this->templating->render('FerTodoBundle:Task:edit');
