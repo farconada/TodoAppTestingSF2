@@ -38,7 +38,8 @@ class TaskControllerSpec extends ObjectBehavior {
         $response->shouldHaveType('Symfony\Component\HttpFoundation\Response');
     }
 
-    public function it_should_have_delete_action(Task $task) {
+    public function it_should_have_delete_action(Task $task, TaskRepository $taskRepo) {
+        $taskRepo->remove($task)->shouldBeCalled();
         $response = $this->deleteAction($task);
         $response->shouldHaveType('Symfony\Component\HttpFoundation\Response');
     }

@@ -33,7 +33,7 @@ class TaskController extends Controller
 
     public function deleteAction($task)
     {
-        // TODO: write logic here
+        $this->repository->remove($task);
         return $this->templating->render('FerTodoBundle:Task:edit');
     }
 }

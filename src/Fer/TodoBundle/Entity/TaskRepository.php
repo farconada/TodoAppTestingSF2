@@ -3,7 +3,7 @@
 namespace Fer\TodoBundle\Entity;
 
 use Doctrine\ORM\EntityRepository;
-
+use Fer\TodoBundle\Entity\Task;
 /**
  * TaskRepository
  *
@@ -12,4 +12,6 @@ use Doctrine\ORM\EntityRepository;
  */
 class TaskRepository extends EntityRepository
 {
+    public function remove(Task $task) {
+    }
 }
