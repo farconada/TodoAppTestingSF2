@@ -9,8 +9,21 @@ namespace spec\Fer\TodoBundle\Controller;
 use PhpSpec\ObjectBehavior;
 use Fer\TodoBundle\Entity\TaskRepository;
 use Fer\TodoBundle\Entity\Task;
+use Symfony\Component\Templating\EngineInterface;
 
 class TaskControllerSpec extends ObjectBehavior {
+
+    public function let(
+        TaskRepository $taskRepo,
+        EngineInterface $templating
+    ) {
+        $this->beConstructedWith($taskRepo, $templating);
+
+    }
+
+    public function it_is_a_symfony_controller() {
+        $this->shouldHaveType('Symfony\Bundle\FrameworkBundle\Controller\Controller');
+    }
 
     public function it_should_be_a_symfony_controller() {
         $this->shouldHaveType('Symfony\Bundle\FrameworkBundle\Controller\Controller');
