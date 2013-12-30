@@ -3,8 +3,6 @@
 namespace Fer\TodoBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use Doctrine\Tests\Common\Annotations\Null;
-use Symfony\Component\Validator\Constraints\False;
 
 /**
  * Task
@@ -53,8 +51,24 @@ class Task
 
     public function __construct($name) {
         $this->name = $name;
+        $this->archived = FALSE;
+        $this->done = FALSE;
+        $this->dueDate = null;
     }
 
+    /**
+     * @return bool
+     */
+    public function isDone() {
+        return $this->done;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isArchived() {
+        return $this->archived;
+    }
 
     /**
      * Get id
@@ -87,52 +101,6 @@ class Task
     public function getName()
     {
         return $this->name;
-    }
-
-    /**
-     * Set isDone
-     *
-     * @param boolean $isDone
-     * @return Task
-     */
-    public function setIsDone($isDone)
-    {
-        $this->isDone = $isDone;
-
-        return $this;
-    }
-
-    /**
-     * Get isDone
-     *
-     * @return boolean 
-     */
-    public function getIsDone()
-    {
-        return $this->isDone;
-    }
-
-    /**
-     * Set isArchived
-     *
-     * @param boolean $isArchived
-     * @return Task
-     */
-    public function setIsArchived($isArchived)
-    {
-        $this->isArchived = $isArchived;
-
-        return $this;
-    }
-
-    /**
-     * Get isArchived
-     *
-     * @return boolean 
-     */
-    public function getIsArchived()
-    {
-        return $this->isArchived;
     }
 
     /**

@@ -9,6 +9,7 @@ namespace spec\Fer\TodoBundle\Entity;
 
 use PhpSpec\ObjectBehavior;
 use Fer\TodoBundle\Entity\Task;
+use Symfony\Component\Validator\Constraints\False;
 
 class TaskSpec extends ObjectBehavior{
     public function let() {
@@ -18,5 +19,12 @@ class TaskSpec extends ObjectBehavior{
     public function it_should_be_initializable() {
         $this->shouldHaveType('Fer\TodoBundle\Entity\Task');
     }
-    
+
+    /**
+     * justo despues de crear el objeto
+     */
+    public function it_should_be_initialized_right() {
+        $this->isDone()->shouldReturn(FALSE);
+        $this->isArchived()->shouldReturn(FALSE);
+    }
 } 
