@@ -33,7 +33,8 @@ class TaskControllerSpec extends ObjectBehavior {
         $response->shouldHaveType('Symfony\Component\HttpFoundation\Response');
     }
 
-    public function it_should_have_save_action(Task $task) {
+    public function it_should_have_save_action(Task $task, TaskRepository $taskRepo) {
+        $taskRepo->save($task)->shouldBeCalled();
         $response = $this->saveAction($task);
         $response->shouldHaveType('Symfony\Component\HttpFoundation\Response');
     }

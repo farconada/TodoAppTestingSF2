@@ -14,4 +14,8 @@ class TaskRepository extends EntityRepository
 {
     public function remove(Task $task) {
     }
+
+    public function save(Task $task) {
+
+    }
 }

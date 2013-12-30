@@ -27,7 +27,7 @@ class TaskController extends Controller
 
     public function saveAction($task)
     {
-        // TODO: write logic here
+        $this->repository->save($task);
         return $this->templating->render('FerTodoBundle:Task:save');
     }
 
