@@ -17,15 +17,18 @@ class TaskControllerSpec extends ObjectBehavior {
     }
 
     public function it_should_have_index_action() {
-        $this->indexAction();
+        $response = $this->indexAction();
+        $response->shouldHaveType('Symfony\Component\HttpFoundation\Response');
     }
 
     public function it_should_have_save_action(Task $task) {
-        $this->saveAction($task);
+        $response = $this->saveAction($task);
+        $response->shouldHaveType('Symfony\Component\HttpFoundation\Response');
     }
 
     public function it_should_have_delete_action(Task $task) {
-        $this->deleteAction($task);
+        $response = $this->deleteAction($task);
+        $response->shouldHaveType('Symfony\Component\HttpFoundation\Response');
     }
 
 
