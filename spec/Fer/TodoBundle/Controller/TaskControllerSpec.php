@@ -20,5 +20,13 @@ class TaskControllerSpec extends ObjectBehavior {
         $this->indexAction();
     }
 
+    public function it_should_have_save_action(Task $task) {
+        $this->saveAction($task);
+    }
+
+    public function it_should_have_delete_action(Task $task) {
+        $this->deleteAction($task);
+    }
+
 
 } 
