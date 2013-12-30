@@ -3,6 +3,8 @@
 namespace Fer\TodoBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Tests\Common\Annotations\Null;
+use Symfony\Component\Validator\Constraints\False;
 
 /**
  * Task
@@ -48,6 +50,10 @@ class Task
      * @ORM\Column(name="dueDate", type="datetime")
      */
     private $dueDate;
+
+    public function __construct($name) {
+        $this->name = $name;
+    }
 
 
     /**
