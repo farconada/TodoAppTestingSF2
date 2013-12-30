@@ -10,4 +10,14 @@ class TaskController extends Controller
     {
 
     }
+
+    public function saveAction($argument1)
+    {
+        // TODO: write logic here
+    }
+
+    public function deleteAction($argument1)
+    {
+        // TODO: write logic here
+    }
 }
