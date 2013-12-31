@@ -1,7 +1,11 @@
 parameters:
-#    fer_todo.example.class: Fer\TodoBundle\Example
+  fer_todo.task_repository.class: Fer\TodoBundle\Entity\TaskRepository
+  fer_todo.task_repository.factory_argument: Fer\TodoBundle\Entity\Task
 
 services:
-#    fer_todo.example:
-#        class: %fer_todo.example.class%
-#        arguments: [@service_id, "plain_value", %parameter%]
+  fer_todo.task_repository:
+    class:           %fer_todo.task_repository.class%
+    factory_service: doctrine.orm.entity_manager
+    factory_method:  getRepository
+    arguments:
+        - %fer_todo.task_repository.factory_argument%

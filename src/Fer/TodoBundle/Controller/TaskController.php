@@ -4,8 +4,8 @@ namespace Fer\TodoBundle\Controller;
 
 use Fer\TodoBundle\Entity\TaskRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Symfony\Component\Serializer\Encoder\EncoderInterface;
 use Symfony\Component\Templating\EngineInterface;
+use JMS\DiExtraBundle\Annotation as DI;
 
 class TaskController extends Controller
 {
@@ -14,6 +14,12 @@ class TaskController extends Controller
 
     private $templating;
 
+    /**
+     * @DI\InjectParams({
+     *     "repository" = @DI\Inject("fer_todo.task_repository"),
+     *     "templating" = @DI\Inject("templating")
+     * })
+     */
     public function __construct(TaskRepository $repository, EngineInterface $templating) {
         $this->repository = $repository;
         $this->templating = $templating;
