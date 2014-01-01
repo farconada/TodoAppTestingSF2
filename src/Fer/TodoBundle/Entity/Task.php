@@ -33,19 +33,19 @@ class Task
      *
      * @ORM\Column(name="isDone", type="boolean")
      */
-    private $isDone;
+    private $done;
 
     /**
      * @var boolean
      *
      * @ORM\Column(name="isArchived", type="boolean")
      */
-    private $isArchived;
+    private $archived;
 
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="dueDate", type="datetime")
+     * @ORM\Column(name="dueDate", type="datetime", nullable=TRUE)
      */
     private $dueDate;
 
