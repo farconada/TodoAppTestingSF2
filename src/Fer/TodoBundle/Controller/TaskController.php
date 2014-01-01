@@ -28,18 +28,18 @@ class TaskController extends Controller
     public function indexAction()
     {
         $tasks = $this->repository->findAll();
-        return $this->templating->render('FerTodoBundle:Task:index');
+        return $this->templating->renderResponse('FerTodoBundle:Task:index.html.twig');
     }
 
     public function saveAction($task)
     {
         $this->repository->save($task);
-        return $this->templating->render('FerTodoBundle:Task:save');
+        return $this->templating->renderResponse('FerTodoBundle:Task:save.html.twig');
     }
 
     public function deleteAction($task)
     {
         $this->repository->remove($task);
-        return $this->templating->render('FerTodoBundle:Task:edit');
+        return $this->templating->renderResponse('FerTodoBundle:Task:edit.html.twig');
     }
 }
