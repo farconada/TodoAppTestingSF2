@@ -1,7 +1,12 @@
 {% extends "FerTodoBundle::layout.html.twig" %}
+{% block head %}
+    <link rel="stylesheet" href="{{ asset('bundles/fertodo/css/todo.css') }}">
+    <script type="text/javascript" src="{{ asset('bundles/fertodo/js/todo.js') }}"></script>
+{% endblock %}
+
 {% block content %}
     <h2>ToDo App</h2>
-    <div ng-controller="TodoCtrl" class="container">
+    <div ng-app="TodoApp" ng-controller="TodoCtrl" class="container">
         <span>[[remaining()]] of [[todos.length]] remaining</span>
         [ <a href="" ng-click="archive()">archive</a> ]
         <ul class="unstyled">
