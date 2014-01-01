@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "4f8e286da9fc8cb34c5ca38569d91ac2",
+    "hash": "16b6ad6a3ff9fe838d37cfef2f080f91",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -2410,32 +2410,36 @@
             "time": "2013-08-16 06:03:22"
         },
         {
-            "name": "fzaninotto/faker",
-            "version": "v1.3.0",
+            "name": "friendsofsymfony/jsrouting-bundle",
+            "version": "dev-master",
+            "target-dir": "FOS/JsRoutingBundle",
             "source": {
                 "type": "git",
-                "url": "https://github.com/fzaninotto/Faker.git",
-                "reference": "1d143fd8caf4d264602450bc01d7484af788706b"
+                "url": "https://github.com/FriendsOfSymfony/FOSJsRoutingBundle.git",
+                "reference": "213ead783b40495a2eb4b87ee1c89ea46af7ae35"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/1d143fd8caf4d264602450bc01d7484af788706b",
-                "reference": "1d143fd8caf4d264602450bc01d7484af788706b",
+                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSJsRoutingBundle/zipball/213ead783b40495a2eb4b87ee1c89ea46af7ae35",
+                "reference": "213ead783b40495a2eb4b87ee1c89ea46af7ae35",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.3"
+                "php": ">=5.3.2",
+                "symfony/console": "~2.0",
+                "symfony/framework-bundle": "~2.0",
+                "symfony/serializer": "~2.0",
+                "willdurand/jsonp-callback-validator": "~1.0"
             },
-            "type": "library",
+            "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.3.0-dev"
+                    "dev-master": "1.5-dev"
                 }
             },
             "autoload": {
                 "psr-0": {
-                    "Faker": "src/",
-                    "Faker\\PHPUnit": "test/"
+                    "FOS\\JsRoutingBundle": ""
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -2444,16 +2448,23 @@
             ],
             "authors": [
                 {
-                    "name": "François Zaninotto"
+                    "name": "William Durand",
+                    "email": "william.durand1@gmail.com",
+                    "homepage": "http://www.willdurand.fr"
+                },
+                {
+                    "name": "FriendsOfSymfony Community",
+                    "homepage": "https://github.com/friendsofsymfony/FOSJsRoutingBundle/contributors"
                 }
             ],
-            "description": "Faker is a PHP library that generates fake data for you.",
+            "description": "A pretty nice way to expose your Symfony2 routing to client applications.",
+            "homepage": "http://friendsofsymfony.github.com",
             "keywords": [
-                "data",
-                "faker",
-                "fixtures"
+                "Js Routing",
+                "javascript",
+                "routing"
             ],
-            "time": "2013-12-16 21:56:48"
+            "time": "2013-12-16 21:22:31"
         },
         {
             "name": "guzzle/common",
@@ -2654,56 +2665,6 @@
             "time": "2013-07-30 22:07:23"
         },
         {
-            "name": "hautelook/alice-bundle",
-            "version": "0.1.3",
-            "target-dir": "Hautelook/AliceBundle",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/hautelook/AliceBundle.git",
-                "reference": "4fd138883bf3262d618960952d91f39e22f86271"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/hautelook/AliceBundle/zipball/4fd138883bf3262d618960952d91f39e22f86271",
-                "reference": "4fd138883bf3262d618960952d91f39e22f86271",
-                "shasum": ""
-            },
-            "require": {
-                "doctrine/data-fixtures": "1.0.*@dev",
-                "doctrine/doctrine-fixtures-bundle": "2.2.*",
-                "nelmio/alice": "~1.5.1",
-                "php": ">=5.3.0"
-            },
-            "require-dev": {
-                "symfony/framework-bundle": "~2.1",
-                "symfony/yaml": "~2.1"
-            },
-            "type": "symfony-bundle",
-            "autoload": {
-                "psr-0": {
-                    "Hautelook\\AliceBundle": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Baldur Rensch",
-                    "email": "brensch@gmail.com"
-                }
-            ],
-            "description": "Symfony2 Bundle that helps loading fixture data written with the Alice library",
-            "keywords": [
-                "Fixture",
-                "Symfony2",
-                "alice",
-                "orm"
-            ],
-            "time": "2013-09-17 17:20:36"
-        },
-        {
             "name": "justinrainbow/json-schema",
             "version": "1.3.5",
             "source": {
@@ -2817,60 +2778,6 @@
             "time": "2013-01-14 16:07:06"
         },
         {
-            "name": "nelmio/alice",
-            "version": "1.5.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/nelmio/alice.git",
-                "reference": "15c66e38d077bd707aa0acacb95cbc083e8261ea"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/nelmio/alice/zipball/15c66e38d077bd707aa0acacb95cbc083e8261ea",
-                "reference": "15c66e38d077bd707aa0acacb95cbc083e8261ea",
-                "shasum": ""
-            },
-            "require": {
-                "fzaninotto/faker": "~1.0",
-                "php": ">=5.3",
-                "symfony/yaml": "~2.0"
-            },
-            "require-dev": {
-                "doctrine/common": "~2.3",
-                "phpunit/phpunit": "3.7.*",
-                "symfony/property-access": "~2.2"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.5.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Nelmio\\Alice\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Nelmio",
-                    "homepage": "http://nelm.io"
-                }
-            ],
-            "description": "Expressive fixtures generator",
-            "keywords": [
-                "Fixture",
-                "data",
-                "orm",
-                "test"
-            ],
-            "time": "2013-08-07 13:12:13"
-        },
-        {
             "name": "phpspec/php-diff",
             "version": "v1.0.2",
             "source": {
@@ -2905,22 +2812,22 @@
         },
         {
             "name": "phpspec/phpspec",
-            "version": "2.0.0-RC1",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpspec/phpspec.git",
-                "reference": "bf4c59ff50f35f6b62f95ef5df86654eaa1c0eb7"
+                "reference": "c0c8e222c307acfad6d2521bc38210c89177457d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpspec/phpspec/zipball/bf4c59ff50f35f6b62f95ef5df86654eaa1c0eb7",
-                "reference": "bf4c59ff50f35f6b62f95ef5df86654eaa1c0eb7",
+                "url": "https://api.github.com/repos/phpspec/phpspec/zipball/c0c8e222c307acfad6d2521bc38210c89177457d",
+                "reference": "c0c8e222c307acfad6d2521bc38210c89177457d",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.3",
                 "phpspec/php-diff": "~1.0.0",
-                "phpspec/prophecy": "~1.0.2",
+                "phpspec/prophecy": "~1.1",
                 "symfony/console": "~2.1",
                 "symfony/event-dispatcher": "~2.1",
                 "symfony/finder": "~2.1",
@@ -2969,20 +2876,20 @@
                 "testing",
                 "tests"
             ],
-            "time": "2013-12-26 00:15:12"
+            "time": "2014-01-01 21:19:12"
         },
         {
             "name": "phpspec/prophecy",
-            "version": "v1.0.4",
+            "version": "v1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpspec/prophecy.git",
-                "reference": "79d9c8bd94801bffbf9b56964f6438762da6d8cd"
+                "reference": "119b07de9c592a0286cd584d6e961903ba096d8a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpspec/prophecy/zipball/79d9c8bd94801bffbf9b56964f6438762da6d8cd",
-                "reference": "79d9c8bd94801bffbf9b56964f6438762da6d8cd",
+                "url": "https://api.github.com/repos/phpspec/prophecy/zipball/119b07de9c592a0286cd584d6e961903ba096d8a",
+                "reference": "119b07de9c592a0286cd584d6e961903ba096d8a",
                 "shasum": ""
             },
             "require-dev": {
@@ -2991,7 +2898,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0.x-dev"
+                    "dev-master": "1.1.x-dev"
                 }
             },
             "autoload": {
@@ -3024,7 +2931,7 @@
                 "spy",
                 "stub"
             ],
-            "time": "2013-08-10 11:11:45"
+            "time": "2014-01-01 21:15:36"
         },
         {
             "name": "sanpi/behatch-contexts",
@@ -3117,6 +3024,46 @@
                 "doctrine"
             ],
             "time": "2013-09-18 15:19:01"
+        },
+        {
+            "name": "willdurand/jsonp-callback-validator",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/willdurand/JsonpCallbackValidator.git",
+                "reference": "58c0a6c76718794856f7049cf066fdda4e984c49"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/willdurand/JsonpCallbackValidator/zipball/58c0a6c76718794856f7049cf066fdda4e984c49",
+                "reference": "58c0a6c76718794856f7049cf066fdda4e984c49",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~3.7"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "JsonpCallbackValidator": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "William DURAND",
+                    "email": "william.durand1@gmail.com",
+                    "homepage": "http://www.willdurand.fr"
+                }
+            ],
+            "description": "JSONP callback validator.",
+            "time": "2013-10-21 12:01:32"
         }
     ],
     "aliases": [
@@ -3128,7 +3075,8 @@
         "phpspec/phpspec": 20,
         "behat/behat": 0,
         "behat/mink": 0,
-        "doctrine/doctrine-fixtures-bundle": 20
+        "doctrine/doctrine-fixtures-bundle": 20,
+        "friendsofsymfony/jsrouting-bundle": 20
     },
     "platform": {
         "php": ">=5.3.3"
