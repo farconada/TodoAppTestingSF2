@@ -1,0 +1,20 @@
+default:
+    extensions:
+        Behat\Symfony2Extension\Extension:
+          mink_driver: true
+          kernel:
+            env: test
+            debug: true
+        Behat\MinkExtension\Extension:
+          base_url:   ~
+          default_session: symfony2
+          goutte: ~
+        Sanpi\Behatch\Extension:
+          contexts:
+              browser: ~
+              debug: ~
+              system: ~
+              json: ~
+              table: ~
+              rest: ~
+              xml: ~
