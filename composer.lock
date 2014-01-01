@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "16b6ad6a3ff9fe838d37cfef2f080f91",
+    "hash": "9b8c56c395e7d6a27fb50616f94a6158",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -2467,6 +2467,52 @@
             "time": "2013-12-16 21:22:31"
         },
         {
+            "name": "fzaninotto/faker",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fzaninotto/Faker.git",
+                "reference": "9f4ad8979821b9d0052656dffaabea035eed6c86"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/9f4ad8979821b9d0052656dffaabea035eed6c86",
+                "reference": "9f4ad8979821b9d0052656dffaabea035eed6c86",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.4.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Faker": "src/",
+                    "Faker\\PHPUnit": "test/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "François Zaninotto"
+                }
+            ],
+            "description": "Faker is a PHP library that generates fake data for you.",
+            "keywords": [
+                "data",
+                "faker",
+                "fixtures"
+            ],
+            "time": "2013-12-17 09:29:03"
+        },
+        {
             "name": "guzzle/common",
             "version": "v3.7.4",
             "target-dir": "Guzzle/Common",
@@ -2816,12 +2862,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpspec/phpspec.git",
-                "reference": "c0c8e222c307acfad6d2521bc38210c89177457d"
+                "reference": "408670415f422c7bfbfb54d9715ec6f33c4b986d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpspec/phpspec/zipball/c0c8e222c307acfad6d2521bc38210c89177457d",
-                "reference": "c0c8e222c307acfad6d2521bc38210c89177457d",
+                "url": "https://api.github.com/repos/phpspec/phpspec/zipball/408670415f422c7bfbfb54d9715ec6f33c4b986d",
+                "reference": "408670415f422c7bfbfb54d9715ec6f33c4b986d",
                 "shasum": ""
             },
             "require": {
@@ -2876,7 +2922,7 @@
                 "testing",
                 "tests"
             ],
-            "time": "2014-01-01 21:19:12"
+            "time": "2014-01-01 21:52:53"
         },
         {
             "name": "phpspec/prophecy",
@@ -3076,7 +3122,8 @@
         "behat/behat": 0,
         "behat/mink": 0,
         "doctrine/doctrine-fixtures-bundle": 20,
-        "friendsofsymfony/jsrouting-bundle": 20
+        "friendsofsymfony/jsrouting-bundle": 20,
+        "fzaninotto/faker": 20
     },
     "platform": {
         "php": ">=5.3.3"
