@@ -13,4 +13,10 @@ Feature: Ser capaz de gestionar la entidad Task
     And the response should be in JSON
     And the JSON node "root" should have 20 elements
 
-  
+  Scenario: Hay una URL que borra archiva una tarea por su ID
+    When I go to "/tarea/1/archiva"
+    Then the response status code should be 200
+    And the header "Content-Type" should be equal to "application/json"
+    And the response should be in JSON
+    And the JSON node "msg" should be equal to "OK"
+    And the task with id "1" should be archivado "TRUE"

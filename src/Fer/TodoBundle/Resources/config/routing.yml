@@ -9,3 +9,7 @@ fer_todo_tareas:
 fer_todo_tareas_lista:
     pattern:  /tareas/lista
     defaults: { _controller: FerTodoBundle:Task:list }
+
+fer_todo_tareas_archiva:
+    pattern:  /tarea/{id}/archiva
+    defaults: { _controller: FerTodoBundle:Task:archiva }

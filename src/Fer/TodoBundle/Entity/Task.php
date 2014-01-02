@@ -125,4 +125,11 @@ class Task
     {
         return $this->dueDate;
     }
+
+    /**
+     * @param bool $status
+     */
+    public function setArchived($status) {
+        $this->archived = $status;
+    }
 }

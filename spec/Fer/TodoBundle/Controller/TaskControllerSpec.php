@@ -51,5 +51,14 @@ class TaskControllerSpec extends ObjectBehavior {
         $response->shouldHaveType('Symfony\Component\HttpFoundation\Response');
     }
 
+    public function it_should_have_a_archiva_action(Task $task, TaskRepository $taskRepo) {
+        $taskRepo->save($task)->shouldBeCalled();
+        $taskRepo->find(Argument::type('integer'))->shouldBeCalled();
+        $taskRepo->find(Argument::type('integer'))->willReturn($task);
+        $task->setArchived(TRUE)->shouldBeCalled();
+        $response = $this->archivaAction(1);
+        $response->shouldHaveType('Symfony\Component\HttpFoundation\Response');
+    }
+
 
 } 

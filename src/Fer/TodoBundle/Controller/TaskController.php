@@ -42,12 +42,19 @@ class TaskController extends Controller
     public function saveAction($task)
     {
         $this->repository->save($task);
-        return $this->templating->renderResponse('FerTodoBundle:Task:save.html.twig');
+        return new Response(json_encode(array('msg' => 'OK')), 200, array('Content-Type' => 'application/json'));
     }
 
     public function deleteAction($task)
     {
         $this->repository->remove($task);
         return $this->templating->renderResponse('FerTodoBundle:Task:edit.html.twig');
+    }
+
+    public function archivaAction($id)
+    {
+        $task = $this->repository->find($id);
+        $task->setArchived(TRUE);
+        return $this->saveAction($task);
     }
 }

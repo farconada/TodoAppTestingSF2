@@ -17,13 +17,8 @@ use Behat\Behat\Context\BehatContext,
 use Behat\Gherkin\Node\PyStringNode,
     Behat\Gherkin\Node\TableNode;
 use Sanpi\Behatch\Context\BehatchContext;
-
-//
-// Require 3rd-party libraries here:
-//
-//   require_once 'PHPUnit/Autoload.php';
-//   require_once 'PHPUnit/Framework/Assert/Functions.php';
-//
+require_once 'PHPUnit/Autoload.php';
+require_once 'PHPUnit/Framework/Assert/Functions.php';
 
 /**
  * Feature context.
@@ -54,5 +49,41 @@ class FeatureContext extends MinkContext //MinkContext if you want to test web
     public function setKernel(KernelInterface $kernel)
     {
         $this->kernel = $kernel;
+    }
+
+    /**
+     * Returns the Doctrine repository manager for a given entity.
+     *
+     * @param string $entityName The name of the entity.
+     *
+     * @return Doctrine\ORM\EntityRepository
+     */
+    protected function getRepository($entityName)
+    {
+        return $this->getEntityManager()->getRepository($entityName);
+    }
+
+    /**
+     * Returns the Doctrine entity manager.
+     *
+     * @return Doctrine\ORM\EntityManager
+     */
+    protected function getEntityManager()
+    {
+        return $this->kernel->getContainer()->get('doctrine')->getManager();
+    }
+
+    /**
+     * @Given /^the task with id "([^"]*)" should be archivado "([^"]*)"$/
+     */
+    public function theTaskWithIdShouldBeArchivado($id, $isArchivado)
+    {
+        $task = $this->getRepository('FerTodoBundle:Task')->find($id);
+        if ($isArchivado == "TRUE") {
+            assertTrue($task->isArchived());
+        } else {
+            assertFalse($task->isArchived());
+        }
+
     }
 }
