@@ -49,7 +49,7 @@ class Task
      */
     private $dueDate;
 
-    public function __construct($name) {
+    public function __construct($name = '') {
         $this->name = $name;
         $this->archived = FALSE;
         $this->done = FALSE;

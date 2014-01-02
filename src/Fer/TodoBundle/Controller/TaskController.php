@@ -7,6 +7,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Templating\EngineInterface;
 use JMS\DiExtraBundle\Annotation as DI;
+use JMS\Serializer\SerializerInterface;
 
 class TaskController extends Controller
 {
@@ -15,46 +16,61 @@ class TaskController extends Controller
 
     private $templating;
 
+    private $response;
+
+    /**
+     * @var
+     */
+    private $serializer;
+
     /**
      * @DI\InjectParams({
      *     "repository" = @DI\Inject("fer_todo.task_repository"),
-     *     "templating" = @DI\Inject("templating")
+     *     "templating" = @DI\Inject("templating"),
+     *     "response"   = @DI\Inject("fer_todo.response"),
+     *     "serializer" = @DI\Inject("jms_serializer")
      * })
      */
-    public function __construct(TaskRepository $repository, EngineInterface $templating) {
+    public function __construct(TaskRepository $repository, EngineInterface $templating, Response $response, SerializerInterface $serializer) {
         $this->repository = $repository;
         $this->templating = $templating;
+        $this->response   = $response;
+        $this->serializer = $serializer;
     }
 
     public function indexAction()
     {
-        $tasks = $this->repository->findAll();
         return $this->templating->renderResponse('FerTodoBundle:Task:index.html.twig');
     }
 
     public function listAction()
     {
         $tasks = $this->repository->findAll();
-        $response = new Response(json_encode($tasks), 200, array('Content-Type' => 'application/json'));
-        return $response;
+        $this->response->setContent(json_encode($tasks));
+        return $this->response;
     }
 
-    public function saveAction($task)
+    public function saveAction($taskData)
     {
+        $task = $this->serializer->deserialize($taskData,'Fer\TodoBundle\Entity\Task','json');
         $this->repository->save($task);
-        return new Response(json_encode(array('msg' => 'OK')), 200, array('Content-Type' => 'application/json'));
+        $this->response->setContent($this->serializer->serialize(array('msg' => 'OK'), 'json'));
+        return $this->response;
     }
 
     public function deleteAction($task)
     {
         $this->repository->remove($task);
-        return $this->templating->renderResponse('FerTodoBundle:Task:edit.html.twig');
+        $this->response->setContent($this->serializer->serialize(array('msg' => 'OK'), 'json'));
+        return $this->response;
     }
 
     public function archivaAction($id)
     {
         $task = $this->repository->find($id);
         $task->setArchived(TRUE);
-        return $this->saveAction($task);
+        $this->repository->save($task);
+        $this->response->setContent($this->serializer->serialize(array('msg' => 'OK'), 'json'));
+        return $this->response;
     }
 }

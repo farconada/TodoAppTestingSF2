@@ -12,15 +12,17 @@ use Fer\TodoBundle\Entity\Task;
 use Symfony\Bundle\TwigBundle\TwigEngine;
 use Symfony\Component\HttpFoundation\Response;
 use Prophecy\Argument;
+use JMS\Serializer\SerializerInterface;
 
 class TaskControllerSpec extends ObjectBehavior {
     public function let(
         TaskRepository $taskRepo,
         TwigEngine $templating,
-        Response $response
+        Response $response,
+        SerializerInterface $serializer
     ) {
         $templating->renderResponse(Argument::any())->willReturn($response);
-        $this->beConstructedWith($taskRepo, $templating);
+        $this->beConstructedWith($taskRepo, $templating, $response, $serializer);
     }
 
     public function it_is_a_symfony_controller() {
@@ -28,14 +30,14 @@ class TaskControllerSpec extends ObjectBehavior {
     }
 
     public function it_should_have_index_action(TaskRepository $taskRepo) {
-        $taskRepo->findAll()->shouldBeCalled();
         $response = $this->indexAction();
         $response->shouldHaveType('Symfony\Component\HttpFoundation\Response');
     }
 
-    public function it_should_have_save_action(Task $task, TaskRepository $taskRepo) {
-        $taskRepo->save($task)->shouldBeCalled();
-        $response = $this->saveAction($task);
+    public function it_should_have_save_action( TaskRepository $taskRepo) {
+        $taskRepo->save(Argument::any())->shouldBeCalled();
+        $taskData = json_encode(array('name' => 'mi tarea'));
+        $response = $this->saveAction($taskData);
         $response->shouldHaveType('Symfony\Component\HttpFoundation\Response');
     }
 

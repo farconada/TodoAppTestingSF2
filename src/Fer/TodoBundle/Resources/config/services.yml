@@ -9,3 +9,11 @@ services:
     factory_method:  getRepository
     arguments:
         - %fer_todo.task_repository.factory_argument%
+
+  fer_todo.response:
+    class: Symfony\Component\HttpFoundation\Response
+    arguments:
+      - ''
+      - 200
+      - Content-Type: 'application/json'
+        X-Header-ToDo-Version: '1.0'

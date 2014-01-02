@@ -19,7 +19,8 @@
         "sensio/framework-extra-bundle": "~3.0",
         "sensio/generator-bundle": "~2.3",
         "incenteev/composer-parameter-handler": "~2.0",
-        "jms/di-extra-bundle": "1.4.*@dev"
+        "jms/di-extra-bundle": "1.4.*@dev",
+        "jms/serializer-bundle": "0.13.*"
     },
     "require-dev": {
         "phpspec/phpspec": "2.0.*@dev",
