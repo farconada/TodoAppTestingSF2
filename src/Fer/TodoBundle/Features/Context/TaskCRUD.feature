@@ -12,3 +12,5 @@ Feature: Ser capaz de gestionar la entidad Task
     And the header "Content-Type" should be equal to "application/json"
     And the response should be in JSON
     And the JSON node "root" should have 20 elements
+
+  

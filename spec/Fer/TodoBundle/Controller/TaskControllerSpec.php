@@ -45,5 +45,11 @@ class TaskControllerSpec extends ObjectBehavior {
         $response->shouldHaveType('Symfony\Component\HttpFoundation\Response');
     }
 
+    public function it_should_have_a_list_action(TaskRepository $taskRepo) {
+        $taskRepo->findAll()->shouldBeCalled();
+        $response = $this->listAction();
+        $response->shouldHaveType('Symfony\Component\HttpFoundation\Response');
+    }
+
 
 } 

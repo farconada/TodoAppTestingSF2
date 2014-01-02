@@ -26,7 +26,7 @@ class TestLoader implements  FixtureInterface
     {
         $faker = \Faker\Factory::create();
 
-        for ($i=0; $i<=20; $i++) {
+        for ($i=0; $i<20; $i++) {
             $task = new Task($faker->sentence(10));
             $manager->persist($task);
         }

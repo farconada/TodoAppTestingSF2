@@ -5,3 +5,7 @@ fer_todo_homepage:
 fer_todo_tareas:
     pattern:  /tareas
     defaults: { _controller: FerTodoBundle:Task:index }
+
+fer_todo_tareas_lista:
+    pattern:  /tareas/lista
+    defaults: { _controller: FerTodoBundle:Task:list }

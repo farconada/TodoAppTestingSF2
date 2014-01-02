@@ -4,6 +4,7 @@ namespace Fer\TodoBundle\Controller;
 
 use Fer\TodoBundle\Entity\TaskRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Templating\EngineInterface;
 use JMS\DiExtraBundle\Annotation as DI;
 
@@ -29,6 +30,13 @@ class TaskController extends Controller
     {
         $tasks = $this->repository->findAll();
         return $this->templating->renderResponse('FerTodoBundle:Task:index.html.twig');
+    }
+
+    public function listAction()
+    {
+        $tasks = $this->repository->findAll();
+        $response = new Response(json_encode($tasks), 200, array('Content-Type' => 'application/json'));
+        return $response;
     }
 
     public function saveAction($task)
