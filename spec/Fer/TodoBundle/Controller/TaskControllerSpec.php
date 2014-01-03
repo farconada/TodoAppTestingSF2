@@ -13,6 +13,7 @@ use Symfony\Bundle\TwigBundle\TwigEngine;
 use Symfony\Component\HttpFoundation\Response;
 use Prophecy\Argument;
 use JMS\Serializer\SerializerInterface;
+use Symfony\Component\HttpFoundation\Request;
 
 class TaskControllerSpec extends ObjectBehavior {
     public function let(
@@ -34,10 +35,12 @@ class TaskControllerSpec extends ObjectBehavior {
         $response->shouldHaveType('Symfony\Component\HttpFoundation\Response');
     }
 
-    public function it_should_have_save_action( TaskRepository $taskRepo) {
+    public function it_should_have_save_action( Task $task, TaskRepository $taskRepo, Request $request, SerializerInterface $serializer) {
         $taskRepo->save(Argument::any())->shouldBeCalled();
-        $taskData = json_encode(array('name' => 'mi tarea'));
-        $response = $this->saveAction($taskData);
+        $serializer->deserialize(Argument::any(),'Fer\TodoBundle\Entity\Task',Argument::any())->willReturn($task);
+        $serializer->serialize(Argument::cetera())->shouldBeCalled();
+        $request->getContent()->willReturn(json_encode(array('name' => 'mi tarea')));
+        $response = $this->saveAction($request);
         $response->shouldHaveType('Symfony\Component\HttpFoundation\Response');
     }
 

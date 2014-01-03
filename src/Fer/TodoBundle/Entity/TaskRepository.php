@@ -16,6 +16,11 @@ class TaskRepository extends EntityRepository
     }
 
     public function save(Task $task) {
-
+        if ($task->getId()) {
+            $this->getEntityManager()->merge($task);
+        } else {
+            $this->getEntityManager()->persist($task);
+        }
+        $this->getEntityManager()->flush();
     }
 }

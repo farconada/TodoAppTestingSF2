@@ -13,3 +13,8 @@ fer_todo_tareas_lista:
 fer_todo_tareas_archiva:
     pattern:  /tarea/{id}/archiva
     defaults: { _controller: FerTodoBundle:Task:archiva }
+
+fer_todo_tarea_save:
+    pattern:  /tarea
+    defaults: { _controller: FerTodoBundle:Task:save }
+    methods: [POST]

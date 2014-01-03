@@ -86,4 +86,13 @@ class FeatureContext extends MinkContext //MinkContext if you want to test web
         }
 
     }
+
+    /**
+     * @Given /^there are "([^"]*)" tareas$/
+     */
+    public function thereAreTareas($numeroTareas)
+    {
+        $task = $this->getRepository('FerTodoBundle:Task')->findAll();
+        assertEquals(count($task), $numeroTareas);
+    }
 }

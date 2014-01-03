@@ -8,6 +8,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Templating\EngineInterface;
 use JMS\DiExtraBundle\Annotation as DI;
 use JMS\Serializer\SerializerInterface;
+use Symfony\Component\HttpFoundation\Request;
 
 class TaskController extends Controller
 {
@@ -50,9 +51,9 @@ class TaskController extends Controller
         return $this->response;
     }
 
-    public function saveAction($taskData)
+    public function saveAction(Request $request)
     {
-        $task = $this->serializer->deserialize($taskData,'Fer\TodoBundle\Entity\Task','json');
+        $task = $this->serializer->deserialize($request->getContent(),'Fer\TodoBundle\Entity\Task','json');
         $this->repository->save($task);
         $this->response->setContent($this->serializer->serialize(array('msg' => 'OK'), 'json'));
         return $this->response;

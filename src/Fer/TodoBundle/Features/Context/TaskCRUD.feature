@@ -20,3 +20,21 @@ Feature: Ser capaz de gestionar la entidad Task
     And the response should be in JSON
     And the JSON node "msg" should be equal to "OK"
     And the task with id "1" should be archivado "TRUE"
+
+  Scenario: Hay una URL que permite actualizar una tarea existente (con id) pasada como JSON
+    When I add "CONTENT_TYPE" header equal to "application/json"
+    And I send a POST request on "/tarea" with body:
+    """
+      {"id": 1, "name": "actualiza tarea"}
+    """
+    Then the response status code should be 200
+    And there are "20" tareas
+
+  Scenario: Hay una URL que permite guardar una tarea nueva (sin id) pasada como JSON
+    When I add "CONTENT_TYPE" header equal to "application/json"
+    And I send a POST request on "/tarea" with body:
+    """
+      {"name": "nueva tarea"}
+    """
+    Then the response status code should be 200
+    And there are "21" tareas

@@ -33,14 +33,14 @@ class Task
      *
      * @ORM\Column(name="isDone", type="boolean")
      */
-    private $done;
+    private $done = FALSE;
 
     /**
      * @var boolean
      *
      * @ORM\Column(name="isArchived", type="boolean")
      */
-    private $archived;
+    private $archived = FALSE;
 
     /**
      * @var \DateTime
