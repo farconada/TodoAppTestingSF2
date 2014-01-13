@@ -10,7 +10,7 @@ use JMS\DiExtraBundle\Annotation as DI;
 use JMS\Serializer\SerializerInterface;
 use Symfony\Component\HttpFoundation\Request;
 
-class TaskController extends Controller
+class TaskController
 {
 
     private $repository;
