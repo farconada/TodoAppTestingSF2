@@ -36,7 +36,7 @@ interface TaskRepositoryInterface
      */
     public function findAll();
 
-    public function save(Task $task);
+    public function save(TaskInterface $task);
 
-    public function remove(Task $task);
+    public function remove(TaskInterface $task);
 }

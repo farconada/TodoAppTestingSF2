@@ -10,7 +10,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Table()
  * @ORM\Entity(repositoryClass="Fer\TodoBundle\Entity\TaskRepository")
  */
-class Task
+class Task implements TaskInterface
 {
     /**
      * @var integer

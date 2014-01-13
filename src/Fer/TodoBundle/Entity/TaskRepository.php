@@ -3,7 +3,7 @@
 namespace Fer\TodoBundle\Entity;
 
 use Doctrine\ORM\EntityRepository;
-use Fer\TodoBundle\Entity\Task;
+use Fer\TodoBundle\Entity\TaskInterface;
 /**
  * TaskRepository
  *
@@ -12,12 +12,12 @@ use Fer\TodoBundle\Entity\Task;
  */
 class TaskRepository extends EntityRepository implements TaskRepositoryInterface
 {
-    public function remove(Task $task) {
+    public function remove(TaskInterface $task) {
         $this->getEntityManager()->remove($task);
         $this->getEntityManager()->flush();
     }
 
-    public function save(Task $task) {
+    public function save(TaskInterface $task) {
         if ($task->getId()) {
             $this->getEntityManager()->merge($task);
         } else {
