@@ -2,7 +2,7 @@
 
 namespace Fer\TodoBundle\Controller;
 
-use Fer\TodoBundle\Entity\TaskRepository;
+use Fer\TodoBundle\Entity\TaskRepositoryInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Templating\EngineInterface;
@@ -32,7 +32,7 @@ class TaskController
      *     "serializer" = @DI\Inject("jms_serializer")
      * })
      */
-    public function __construct(TaskRepository $repository, EngineInterface $templating, Response $response, SerializerInterface $serializer) {
+    public function __construct(TaskRepositoryInterface $repository, EngineInterface $templating, Response $response, SerializerInterface $serializer) {
         $this->repository = $repository;
         $this->templating = $templating;
         $this->response   = $response;
