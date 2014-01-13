@@ -13,6 +13,8 @@ use Fer\TodoBundle\Entity\Task;
 class TaskRepository extends EntityRepository
 {
     public function remove(Task $task) {
+        $this->getEntityManager()->remove($task);
+        $this->getEntityManager()->flush();
     }
 
     public function save(Task $task) {

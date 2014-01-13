@@ -59,8 +59,9 @@ class TaskController extends Controller
         return $this->response;
     }
 
-    public function deleteAction($task)
+    public function deleteAction($id)
     {
+        $task = $this->repository->find($id);
         $this->repository->remove($task);
         $this->response->setContent($this->serializer->serialize(array('msg' => 'OK'), 'json'));
         return $this->response;

@@ -18,3 +18,8 @@ fer_todo_tarea_save:
     pattern:  /tarea
     defaults: { _controller: FerTodoBundle:Task:save }
     methods: [POST]
+
+fer_todo_tarea_borra:
+    pattern:  /tarea/{id}
+    defaults: { _controller: FerTodoBundle:Task:delete }
+    methods: [DELETE]

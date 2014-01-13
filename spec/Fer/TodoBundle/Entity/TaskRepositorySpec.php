@@ -32,4 +32,9 @@ class TaskRepositorySpec extends ObjectBehavior {
         $em->merge($task)->shouldBeCalled();
         $this->save($task);
     }
+
+    public function it_should_have_remove_function(EntityManager $em, Task $task) {
+        $em->remove($task)->shouldBeCalled();
+        $this->remove($task);
+    }
 } 

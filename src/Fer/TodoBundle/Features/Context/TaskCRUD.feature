@@ -38,3 +38,9 @@ Feature: Ser capaz de gestionar la entidad Task
     """
     Then the response status code should be 200
     And there are "21" tareas
+
+  Scenario: Hay una URL que permite borrar una tarea por su ID
+    When I send a DELETE request on "/tarea/1"
+    Then the response status code should be 200
+    And I go to "/tareas/lista"
+    And the JSON node "root" should have 19 elements
