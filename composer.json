@@ -35,7 +35,8 @@
         "vipsoft/doctrine-data-fixtures-extension": "*",
         "doctrine/doctrine-fixtures-bundle": "dev-master",
         "friendsofsymfony/jsrouting-bundle": "dev-master",
-        "fzaninotto/faker": "dev-master"
+        "fzaninotto/faker": "dev-master",
+        "pdepend/pdepend" : "1.*"
     },
     "scripts": {
         "post-install-cmd": [
