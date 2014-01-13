@@ -35,6 +35,11 @@ class TaskControllerSpec extends ObjectBehavior {
         $response->shouldHaveType('Symfony\Component\HttpFoundation\Response');
     }
 
+    public function it_indexaction_should_render_index_template(TwigEngine $templating) {
+        $templating->renderResponse(Argument::any())->shouldBeCalled('FerTodoBundle:Task:index.html.twig');
+        $this->indexAction();
+    }
+
     public function it_should_have_save_action( Task $task, TaskRepository $taskRepo, Request $request, SerializerInterface $serializer) {
         $taskRepo->save(Argument::any())->shouldBeCalled();
         $serializer->deserialize(Argument::any(),'Fer\TodoBundle\Entity\Task',Argument::any())->willReturn($task);
