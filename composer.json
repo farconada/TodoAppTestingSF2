@@ -36,7 +36,8 @@
         "doctrine/doctrine-fixtures-bundle": "dev-master",
         "friendsofsymfony/jsrouting-bundle": "dev-master",
         "fzaninotto/faker": "dev-master",
-        "pdepend/pdepend" : "1.*"
+        "pdepend/pdepend" : "1.*",
+        "henrikbjorn/phpspec-code-coverage" : "*@dev"
     },
     "scripts": {
         "post-install-cmd": [

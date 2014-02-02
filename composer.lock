@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "8c917fb7dacf8573b810e95f96e248ac",
+    "hash": "208f6149353305768b66cb3fd114455e",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -1298,16 +1298,16 @@
         },
         {
             "name": "phpoption/phpoption",
-            "version": "1.3.0",
+            "version": "1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/schmittjoh/php-option.git",
-                "reference": "1c7e8016289d17d83ced49c56d0f266fd0568941"
+                "reference": "5d099bcf0393908bf4ad69cc47dafb785d51f7f5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/schmittjoh/php-option/zipball/1c7e8016289d17d83ced49c56d0f266fd0568941",
-                "reference": "1c7e8016289d17d83ced49c56d0f266fd0568941",
+                "url": "https://api.github.com/repos/schmittjoh/php-option/zipball/5d099bcf0393908bf4ad69cc47dafb785d51f7f5",
+                "reference": "5d099bcf0393908bf4ad69cc47dafb785d51f7f5",
                 "shasum": ""
             },
             "require": {
@@ -1343,7 +1343,7 @@
                 "php",
                 "type"
             ],
-            "time": "2013-05-19 11:09:35"
+            "time": "2014-01-09 22:37:17"
         },
         {
             "name": "psr/log",
@@ -1694,17 +1694,17 @@
         },
         {
             "name": "symfony/monolog-bundle",
-            "version": "v2.4.1",
+            "version": "v2.5.0",
             "target-dir": "Symfony/Bundle/MonologBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/MonologBundle.git",
-                "reference": "e81c2e9c4dc0a9ff794674017069e036f575f278"
+                "reference": "29a17a347dfc41aed34ce9b72cceaf375635c408"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/MonologBundle/zipball/e81c2e9c4dc0a9ff794674017069e036f575f278",
-                "reference": "e81c2e9c4dc0a9ff794674017069e036f575f278",
+                "url": "https://api.github.com/repos/symfony/MonologBundle/zipball/29a17a347dfc41aed34ce9b72cceaf375635c408",
+                "reference": "29a17a347dfc41aed34ce9b72cceaf375635c408",
                 "shasum": ""
             },
             "require": {
@@ -1722,7 +1722,7 @@
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.4.x-dev"
+                    "dev-master": "2.5.x-dev"
                 }
             },
             "autoload": {
@@ -1750,21 +1750,21 @@
                 "log",
                 "logging"
             ],
-            "time": "2013-08-26 10:15:04"
+            "time": "2014-01-19 13:23:40"
         },
         {
             "name": "symfony/swiftmailer-bundle",
-            "version": "v2.3.4",
+            "version": "v2.3.5",
             "target-dir": "Symfony/Bundle/SwiftmailerBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/SwiftmailerBundle.git",
-                "reference": "f5e5d12629c26a835c7aa1d74e2e041486b92d93"
+                "reference": "fcefa9dbd5a1ed20547b0f8a2afd5ad6837ea321"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/SwiftmailerBundle/zipball/f5e5d12629c26a835c7aa1d74e2e041486b92d93",
-                "reference": "f5e5d12629c26a835c7aa1d74e2e041486b92d93",
+                "url": "https://api.github.com/repos/symfony/SwiftmailerBundle/zipball/fcefa9dbd5a1ed20547b0f8a2afd5ad6837ea321",
+                "reference": "fcefa9dbd5a1ed20547b0f8a2afd5ad6837ea321",
                 "shasum": ""
             },
             "require": {
@@ -1805,7 +1805,7 @@
             ],
             "description": "Symfony SwiftmailerBundle",
             "homepage": "http://symfony.com",
-            "time": "2013-08-22 13:32:58"
+            "time": "2013-11-21 12:29:01"
         },
         {
             "name": "symfony/symfony",
@@ -2629,21 +2629,21 @@
         },
         {
             "name": "fabpot/goutte",
-            "version": "v1.0.3",
+            "version": "v1.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/fabpot/Goutte.git",
-                "reference": "75c9f23c4122caf4ea3e87a42a00b471366e707f"
+                "reference": "a30e84e28fbaf14909d2d007249c24cd0ecd425e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fabpot/Goutte/zipball/75c9f23c4122caf4ea3e87a42a00b471366e707f",
-                "reference": "75c9f23c4122caf4ea3e87a42a00b471366e707f",
+                "url": "https://api.github.com/repos/fabpot/Goutte/zipball/a30e84e28fbaf14909d2d007249c24cd0ecd425e",
+                "reference": "a30e84e28fbaf14909d2d007249c24cd0ecd425e",
                 "shasum": ""
             },
             "require": {
                 "ext-curl": "*",
-                "guzzle/http": ">=3.0.5,<3.8-dev",
+                "guzzle/http": "~3.1",
                 "php": ">=5.3.0",
                 "symfony/browser-kit": "~2.1",
                 "symfony/css-selector": "~2.1",
@@ -2652,8 +2652,8 @@
                 "symfony/process": "~2.1"
             },
             "require-dev": {
-                "guzzle/plugin-history": ">=3.0.5,<3.8-dev",
-                "guzzle/plugin-mock": ">=3.0.5,<3.8-dev"
+                "guzzle/plugin-history": "~3.1",
+                "guzzle/plugin-mock": "~3.1"
             },
             "type": "application",
             "extra": {
@@ -2681,7 +2681,7 @@
             "keywords": [
                 "scraper"
             ],
-            "time": "2013-08-16 06:03:22"
+            "time": "2014-01-31 18:02:50"
         },
         {
             "name": "friendsofsymfony/jsrouting-bundle",
@@ -2690,12 +2690,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfSymfony/FOSJsRoutingBundle.git",
-                "reference": "96abbb0a560c7ef0c4928f231e5da70a63135420"
+                "reference": "36629f5976f9f588093bf0bfb5230502fdb0eacf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSJsRoutingBundle/zipball/96abbb0a560c7ef0c4928f231e5da70a63135420",
-                "reference": "96abbb0a560c7ef0c4928f231e5da70a63135420",
+                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSJsRoutingBundle/zipball/36629f5976f9f588093bf0bfb5230502fdb0eacf",
+                "reference": "36629f5976f9f588093bf0bfb5230502fdb0eacf",
                 "shasum": ""
             },
             "require": {
@@ -2738,7 +2738,7 @@
                 "javascript",
                 "routing"
             ],
-            "time": "2014-01-10 10:51:48"
+            "time": "2014-01-24 08:28:48"
         },
         {
             "name": "fzaninotto/faker",
@@ -2746,12 +2746,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fzaninotto/Faker.git",
-                "reference": "ff43a34c9cff2a22e765a8ebc2be3ec591165049"
+                "reference": "6bc40f81096daedc809b6ea6d54cd0c1a6146819"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/ff43a34c9cff2a22e765a8ebc2be3ec591165049",
-                "reference": "ff43a34c9cff2a22e765a8ebc2be3ec591165049",
+                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/6bc40f81096daedc809b6ea6d54cd0c1a6146819",
+                "reference": "6bc40f81096daedc809b6ea6d54cd0c1a6146819",
                 "shasum": ""
             },
             "require": {
@@ -2784,21 +2784,21 @@
                 "faker",
                 "fixtures"
             ],
-            "time": "2014-01-06 17:50:11"
+            "time": "2014-01-30 17:51:10"
         },
         {
             "name": "guzzle/common",
-            "version": "v3.7.4",
+            "version": "v3.8.1",
             "target-dir": "Guzzle/Common",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/common.git",
-                "reference": "5126e268446c7e7df961b89128d71878e0652432"
+                "reference": "67f6c3fd04bae387d47c2a673fa623ed8f4189bb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/common/zipball/5126e268446c7e7df961b89128d71878e0652432",
-                "reference": "5126e268446c7e7df961b89128d71878e0652432",
+                "url": "https://api.github.com/repos/guzzle/common/zipball/67f6c3fd04bae387d47c2a673fa623ed8f4189bb",
+                "reference": "67f6c3fd04bae387d47c2a673fa623ed8f4189bb",
                 "shasum": ""
             },
             "require": {
@@ -2828,21 +2828,21 @@
                 "event",
                 "exception"
             ],
-            "time": "2013-10-02 20:47:00"
+            "time": "2014-01-28 22:29:15"
         },
         {
             "name": "guzzle/http",
-            "version": "v3.7.4",
+            "version": "v3.8.1",
             "target-dir": "Guzzle/Http",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/http.git",
-                "reference": "3420035adcf312d62a2e64f3e6b3e3e590121786"
+                "reference": "565fd64be16d91c840f497c5de76f86d54a822d8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/http/zipball/3420035adcf312d62a2e64f3e6b3e3e590121786",
-                "reference": "3420035adcf312d62a2e64f3e6b3e3e590121786",
+                "url": "https://api.github.com/repos/guzzle/http/zipball/565fd64be16d91c840f497c5de76f86d54a822d8",
+                "reference": "565fd64be16d91c840f497c5de76f86d54a822d8",
                 "shasum": ""
             },
             "require": {
@@ -2885,21 +2885,21 @@
                 "http",
                 "http client"
             ],
-            "time": "2013-09-20 22:05:53"
+            "time": "2014-01-23 18:23:29"
         },
         {
             "name": "guzzle/parser",
-            "version": "v3.7.4",
+            "version": "v3.8.1",
             "target-dir": "Guzzle/Parser",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/parser.git",
-                "reference": "a25c2ddda1c52fb69a4ee56eb530b13ddd9573c2"
+                "reference": "3f52387052f2e4ef083145a0f73c3654aa14e086"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/parser/zipball/a25c2ddda1c52fb69a4ee56eb530b13ddd9573c2",
-                "reference": "a25c2ddda1c52fb69a4ee56eb530b13ddd9573c2",
+                "url": "https://api.github.com/repos/guzzle/parser/zipball/3f52387052f2e4ef083145a0f73c3654aa14e086",
+                "reference": "3f52387052f2e4ef083145a0f73c3654aa14e086",
                 "shasum": ""
             },
             "require": {
@@ -2929,21 +2929,21 @@
                 "message",
                 "url"
             ],
-            "time": "2013-07-11 22:46:03"
+            "time": "2013-10-24 00:04:09"
         },
         {
             "name": "guzzle/stream",
-            "version": "v3.7.4",
+            "version": "v3.8.1",
             "target-dir": "Guzzle/Stream",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/stream.git",
-                "reference": "a86111d9ac7db31d65a053c825869409fe8fc83f"
+                "reference": "fa8af730ca714861c0001cfba64aaecc5f21bb96"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/stream/zipball/a86111d9ac7db31d65a053c825869409fe8fc83f",
-                "reference": "a86111d9ac7db31d65a053c825869409fe8fc83f",
+                "url": "https://api.github.com/repos/guzzle/stream/zipball/fa8af730ca714861c0001cfba64aaecc5f21bb96",
+                "reference": "fa8af730ca714861c0001cfba64aaecc5f21bb96",
                 "shasum": ""
             },
             "require": {
@@ -2982,7 +2982,44 @@
                 "component",
                 "stream"
             ],
-            "time": "2013-07-30 22:07:23"
+            "time": "2014-01-28 22:14:17"
+        },
+        {
+            "name": "henrikbjorn/phpspec-code-coverage",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/henrikbjorn/PhpSpecCodeCoverageExtension.git",
+                "reference": "4569b96b64f5307c36fc6df1029ff1349787f044"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/henrikbjorn/PhpSpecCodeCoverageExtension/zipball/4569b96b64f5307c36fc6df1029ff1349787f044",
+                "reference": "4569b96b64f5307c36fc6df1029ff1349787f044",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "phpspec/phpspec": "2.0.*@dev",
+                "phpunit/php-code-coverage": "~1.2"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "PhpSpec\\Extension\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Integrates CodeCoverage with PhpSpec",
+            "time": "2014-01-22 08:16:44"
         },
         {
             "name": "justinrainbow/json-schema",
@@ -3169,12 +3206,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpspec/phpspec.git",
-                "reference": "c1cff1c0dac5c9936e2419d69af57978e2a6d043"
+                "reference": "12e8105924c08f7958c149bc1b60c4951ff82e30"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpspec/phpspec/zipball/c1cff1c0dac5c9936e2419d69af57978e2a6d043",
-                "reference": "c1cff1c0dac5c9936e2419d69af57978e2a6d043",
+                "url": "https://api.github.com/repos/phpspec/phpspec/zipball/12e8105924c08f7958c149bc1b60c4951ff82e30",
+                "reference": "12e8105924c08f7958c149bc1b60c4951ff82e30",
                 "shasum": ""
             },
             "require": {
@@ -3233,20 +3270,20 @@
                 "testing",
                 "tests"
             ],
-            "time": "2014-01-05 12:17:59"
+            "time": "2014-01-24 20:56:23"
         },
         {
             "name": "phpspec/prophecy",
-            "version": "v1.1.0",
+            "version": "1.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpspec/prophecy.git",
-                "reference": "119b07de9c592a0286cd584d6e961903ba096d8a"
+                "reference": "976a65af02a2a0e17ce6c949f7b43437205628bb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpspec/prophecy/zipball/119b07de9c592a0286cd584d6e961903ba096d8a",
-                "reference": "119b07de9c592a0286cd584d6e961903ba096d8a",
+                "url": "https://api.github.com/repos/phpspec/prophecy/zipball/976a65af02a2a0e17ce6c949f7b43437205628bb",
+                "reference": "976a65af02a2a0e17ce6c949f7b43437205628bb",
                 "shasum": ""
             },
             "require-dev": {
@@ -3288,7 +3325,207 @@
                 "spy",
                 "stub"
             ],
-            "time": "2014-01-01 21:15:36"
+            "time": "2014-01-24 11:03:43"
+        },
+        {
+            "name": "phpunit/php-code-coverage",
+            "version": "1.2.14",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
+                "reference": "d4b3bc1c4b905cd0b3b356e8608857f26a041c1b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/d4b3bc1c4b905cd0b3b356e8608857f26a041c1b",
+                "reference": "d4b3bc1c4b905cd0b3b356e8608857f26a041c1b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "phpunit/php-file-iterator": ">=1.3.0@stable",
+                "phpunit/php-text-template": ">=1.2.0@stable",
+                "phpunit/php-token-stream": ">=1.1.3@stable"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "3.7.*@dev"
+            },
+            "suggest": {
+                "ext-dom": "*",
+                "ext-xdebug": ">=2.0.5"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.2.x-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "PHP/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "include-path": [
+                ""
+            ],
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Sebastian Bergmann",
+                    "email": "sb@sebastian-bergmann.de",
+                    "role": "lead"
+                }
+            ],
+            "description": "Library that provides collection, processing, and rendering functionality for PHP code coverage information.",
+            "homepage": "https://github.com/sebastianbergmann/php-code-coverage",
+            "keywords": [
+                "coverage",
+                "testing",
+                "xunit"
+            ],
+            "time": "2014-01-31 08:51:59"
+        },
+        {
+            "name": "phpunit/php-file-iterator",
+            "version": "1.3.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sebastianbergmann/php-file-iterator.git",
+                "reference": "acd690379117b042d1c8af1fafd61bde001bf6bb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-file-iterator/zipball/acd690379117b042d1c8af1fafd61bde001bf6bb",
+                "reference": "acd690379117b042d1c8af1fafd61bde001bf6bb",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "File/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "include-path": [
+                ""
+            ],
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Sebastian Bergmann",
+                    "email": "sb@sebastian-bergmann.de",
+                    "role": "lead"
+                }
+            ],
+            "description": "FilterIterator implementation that filters files based on a list of suffixes.",
+            "homepage": "https://github.com/sebastianbergmann/php-file-iterator/",
+            "keywords": [
+                "filesystem",
+                "iterator"
+            ],
+            "time": "2013-10-10 15:34:57"
+        },
+        {
+            "name": "phpunit/php-text-template",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sebastianbergmann/php-text-template.git",
+                "reference": "206dfefc0ffe9cebf65c413e3d0e809c82fbf00a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-text-template/zipball/206dfefc0ffe9cebf65c413e3d0e809c82fbf00a",
+                "reference": "206dfefc0ffe9cebf65c413e3d0e809c82fbf00a",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "Text/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "include-path": [
+                ""
+            ],
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Sebastian Bergmann",
+                    "email": "sb@sebastian-bergmann.de",
+                    "role": "lead"
+                }
+            ],
+            "description": "Simple template engine.",
+            "homepage": "https://github.com/sebastianbergmann/php-text-template/",
+            "keywords": [
+                "template"
+            ],
+            "time": "2014-01-30 17:20:04"
+        },
+        {
+            "name": "phpunit/php-token-stream",
+            "version": "1.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sebastianbergmann/php-token-stream.git",
+                "reference": "5220af2a7929aa35cf663d97c89ad3d50cf5fa3e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-token-stream/zipball/5220af2a7929aa35cf663d97c89ad3d50cf5fa3e",
+                "reference": "5220af2a7929aa35cf663d97c89ad3d50cf5fa3e",
+                "shasum": ""
+            },
+            "require": {
+                "ext-tokenizer": "*",
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.2-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "PHP/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "include-path": [
+                ""
+            ],
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Sebastian Bergmann",
+                    "email": "sb@sebastian-bergmann.de",
+                    "role": "lead"
+                }
+            ],
+            "description": "Wrapper around PHP's tokenizer extension.",
+            "homepage": "https://github.com/sebastianbergmann/php-token-stream/",
+            "keywords": [
+                "tokenizer"
+            ],
+            "time": "2013-09-13 04:58:23"
         },
         {
             "name": "sanpi/behatch-contexts",
@@ -3335,16 +3572,16 @@
         },
         {
             "name": "vipsoft/doctrine-data-fixtures-extension",
-            "version": "0.10.1",
+            "version": "0.10.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vipsoft/DoctrineDataFixturesExtension.git",
-                "reference": "fd544e99ab0dd5110a4dca2d30c32f585248ad28"
+                "reference": "97bf5a895605560100ec5786c5835ca2fcd41868"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vipsoft/DoctrineDataFixturesExtension/zipball/fd544e99ab0dd5110a4dca2d30c32f585248ad28",
-                "reference": "fd544e99ab0dd5110a4dca2d30c32f585248ad28",
+                "url": "https://api.github.com/repos/vipsoft/DoctrineDataFixturesExtension/zipball/97bf5a895605560100ec5786c5835ca2fcd41868",
+                "reference": "97bf5a895605560100ec5786c5835ca2fcd41868",
                 "shasum": ""
             },
             "require": {
@@ -3356,6 +3593,12 @@
                 "symfony/dependency-injection": ">=2.0.0,<3.0-dev"
             },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0.x-dev",
+                    "dev-2.5": "0.10.x-dev"
+                }
+            },
             "autoload": {
                 "psr-0": {
                     "VIPSoft\\DoctrineDataFixturesExtension": "src/"
@@ -3380,20 +3623,20 @@
                 "Data fixtures",
                 "doctrine"
             ],
-            "time": "2013-09-18 15:19:01"
+            "time": "2014-01-20 15:39:41"
         },
         {
             "name": "willdurand/jsonp-callback-validator",
-            "version": "v1.0.0",
+            "version": "v1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/willdurand/JsonpCallbackValidator.git",
-                "reference": "58c0a6c76718794856f7049cf066fdda4e984c49"
+                "reference": "1a7d388bb521959e612ef50c5c7b1691b097e909"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/willdurand/JsonpCallbackValidator/zipball/58c0a6c76718794856f7049cf066fdda4e984c49",
-                "reference": "58c0a6c76718794856f7049cf066fdda4e984c49",
+                "url": "https://api.github.com/repos/willdurand/JsonpCallbackValidator/zipball/1a7d388bb521959e612ef50c5c7b1691b097e909",
+                "reference": "1a7d388bb521959e612ef50c5c7b1691b097e909",
                 "shasum": ""
             },
             "require": {
@@ -3414,13 +3657,13 @@
             ],
             "authors": [
                 {
-                    "name": "William DURAND",
+                    "name": "William Durand",
                     "email": "william.durand1@gmail.com",
                     "homepage": "http://www.willdurand.fr"
                 }
             ],
             "description": "JSONP callback validator.",
-            "time": "2013-10-21 12:01:32"
+            "time": "2014-01-20 22:35:06"
         }
     ],
     "aliases": [
@@ -3434,7 +3677,8 @@
         "behat/mink": 0,
         "doctrine/doctrine-fixtures-bundle": 20,
         "friendsofsymfony/jsrouting-bundle": 20,
-        "fzaninotto/faker": 20
+        "fzaninotto/faker": 20,
+        "henrikbjorn/phpspec-code-coverage": 20
     },
     "platform": {
         "php": ">=5.3.3"
